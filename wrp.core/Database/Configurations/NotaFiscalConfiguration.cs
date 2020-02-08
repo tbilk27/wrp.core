@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
+﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using wrp.core.Entity;
 
 namespace wrp.core.Database.Configurations
@@ -70,7 +69,6 @@ namespace wrp.core.Database.Configurations
             builder.HasOne<OperacaoFiscal>()
                 .WithMany(c => c.NotasFiscais)
                 .HasForeignKey(c => c.IDOperacaoFiscal);
-
         }
     }
 }

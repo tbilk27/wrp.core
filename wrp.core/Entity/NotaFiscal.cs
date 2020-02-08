@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 using wrp.core.Entity.Enum;
 using wrp.core.Entity.Proform;
-using wrp.core.Infrastructure.Filters;
 
 namespace wrp.core.Entity
 {
@@ -17,7 +15,7 @@ namespace wrp.core.Entity
         //emissão
         public DateTime DataEmissao { get; set; }
 
-        //data de movimento       
+        //data de movimento
         public DateTime DataMovimento { get; set; }
 
         //Tipo de Emissão
@@ -28,10 +26,12 @@ namespace wrp.core.Entity
 
         //Destinatário
         public Pessoa Pessoa { get; set; }
+
         public string IDPessoa { get; set; }
 
         //Série
         public SerieDocumentoFiscal Serie { get; set; }
+
         public string IDSerie { get; set; }
 
         //chave NFe
@@ -42,6 +42,7 @@ namespace wrp.core.Entity
 
         //transportadora
         public Pessoa Transportadora { get; set; }
+
         public string IDTransportadora { get; set; }
 
         public decimal ValorMercadoria { get; set; }
@@ -81,8 +82,8 @@ namespace wrp.core.Entity
 
         // Para NFS-e ---------------
         public decimal ValorIR { get; set; }
+
         public decimal ValorINSS { get; set; }
         public decimal ValorCSLL { get; set; }
-
     }
 }

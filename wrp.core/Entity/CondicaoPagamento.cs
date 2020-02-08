@@ -14,5 +14,6 @@ namespace wrp.core.Entity
         public decimal ValorMinimo { get; set; }
 
         public virtual ICollection<CondicaoPagamentoItem> Itens { get; set; }
+        public virtual ICollection<NotaFiscal> NotasFiscais { get; set; }
     }
 }

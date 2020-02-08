@@ -1,4 +1,5 @@
-﻿using wrp.core.Entity.Proform;
+﻿using System.Collections.Generic;
+using wrp.core.Entity.Proform;
 
 namespace wrp.core.Entity
 {
@@ -13,5 +14,7 @@ namespace wrp.core.Entity
 
         public AcessoGrupo AcessoGrupo { get; set; }
         public string IDAcessoGrupo { get; set; }
+
+        public ICollection<Menu> Menus { get; set; }
     }
 }

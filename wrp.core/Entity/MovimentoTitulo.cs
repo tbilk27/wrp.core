@@ -40,5 +40,7 @@ namespace wrp.core.Entity
         public TipoBaixaMovimentoTitulo TipoBaixaMovimentoTitulo { get; set; }
 
         public ICollection<Comissao> Comissoes { get; set; }
+
+        public ICollection<MovimentoConta> Movimentos { get; set; }
     }
 }

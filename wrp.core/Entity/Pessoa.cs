@@ -78,5 +78,8 @@ namespace wrp.core.Entity
         //public string CodigoReferencia { get; set; }
 
         public ICollection<Filial> Filials { get; set; }
+
+        public virtual ICollection<NotaFiscal> NotasFiscais { get; set; }
+        public virtual ICollection<NotaFiscal> NotasFiscaisTransporte { get; set; }
     }
 }

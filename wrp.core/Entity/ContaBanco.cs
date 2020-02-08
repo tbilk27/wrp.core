@@ -1,4 +1,5 @@
-﻿using wrp.core.Entity.Proform;
+﻿using System.Collections.Generic;
+using wrp.core.Entity.Proform;
 
 namespace wrp.core.Entity
 {
@@ -18,5 +19,9 @@ namespace wrp.core.Entity
         public string DvConta { get; set; }
 
         public bool PadraoPagamento { get; set; }
+
+        public virtual ICollection<MovimentoConta> Movimentos { get; set; }
+
+        public virtual ICollection<NotaFiscal> NotasFiscais { get; set; }
     }
 }

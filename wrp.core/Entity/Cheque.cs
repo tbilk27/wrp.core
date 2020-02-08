@@ -22,5 +22,7 @@ namespace wrp.core.Entity
         public decimal Valor { get; set; }
 
         public bool Cancelado { get; set; }
+
+        public ICollection<MovimentoConta> Movimentos { get; set; }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using wrp.core.Entity.Enum;
 using wrp.core.Entity.Proform;
@@ -28,5 +29,7 @@ namespace wrp.core.Entity
         public FinalidadeEmissaoNFe FinalidadeEmissao { get; set; }
 
         public bool Ativo { get; set; }
+
+        public virtual ICollection<NotaFiscal> NotasFiscais { get; set; }
     }
 }

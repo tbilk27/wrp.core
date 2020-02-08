@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using wrp.core.Entity.Proform;
 using wrp.core.Infrastructure.Filters;
@@ -33,6 +34,8 @@ namespace wrp.core.Entity
         public bool EmiteNFe { get; set; }
 
         public bool EmiteNFSe { get; set; }
+
+        public virtual ICollection<NotaFiscal> NotasFiscais { get; set; }
 
     }
 }

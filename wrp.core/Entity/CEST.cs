@@ -10,6 +10,6 @@ namespace wrp.core.Entity
 
         public string Descricao { get; set; }
 
-        public virtual ICollection<NCMCEST> NCMCEST { get; set; }
+        public virtual ICollection<NCMCEST> NCMCESTs { get; set; }
     }
 }

@@ -19,5 +19,9 @@ namespace wrp.core.Entity
         public string IDContaFinanceiraAnalitica { get; set; }
 
         public virtual ICollection<ContaFinanceira> ListaContasFilhas { get; set; }
+
+        public virtual ICollection<MovimentoConta> Movimentos { get; set; }
+
+        public virtual ICollection<NotaFiscal> NotasFiscais { get; set; }
     }
 }

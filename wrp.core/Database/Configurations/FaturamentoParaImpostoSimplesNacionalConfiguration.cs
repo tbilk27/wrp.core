@@ -1,16 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using wrp.core.Entity;
+﻿using wrp.core.Entity;
 
 namespace wrp.core.Database.Configurations
 {
-    public class FaturamentoParaImpostoSimplesNacionalConfiguration : IEntityTypeConfiguration<FaturamentoParaImpostoSimplesNacional>
+    public class FaturamentoParaImpostoSimplesNacionalConfiguration : BaseConfiguration<FaturamentoParaImpostoSimplesNacional>
     {
-        public void Configure(EntityTypeBuilder<FaturamentoParaImpostoSimplesNacional> builder)
-        {
-            builder.ToTable("FaturamentoParaImpostoSimplesNacional");
-
-            builder.HasKey(o => o.ID);
-        }
     }
 }

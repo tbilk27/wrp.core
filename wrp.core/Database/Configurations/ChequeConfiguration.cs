@@ -1,16 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using wrp.core.Entity;
+﻿using wrp.core.Entity;
 
 namespace wrp.core.Database.Configurations
 {
-    public class ChequeConfiguration : IEntityTypeConfiguration<Cheque>
+    public class ChequeConfiguration : BaseConfiguration<Cheque>
     {
-        public void Configure(EntityTypeBuilder<Cheque> builder)
-        {
-            builder.ToTable("Cheque");
-
-            builder.HasKey(o => o.ID);
-        }
     }
 }

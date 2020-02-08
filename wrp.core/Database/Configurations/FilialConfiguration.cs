@@ -7,14 +7,10 @@ using wrp.core.Entity;
 
 namespace wrp.core.Database.Configurations
 {
-    public class FilialConfiguration : IEntityTypeConfiguration<Filial>
+    public class FilialConfiguration : BaseConfiguration<Filial>
     {
         public void Configure(EntityTypeBuilder<Filial> builder)
         {
-            builder.ToTable("Filial");
-
-            builder.HasKey(o => o.ID);
-
             builder.HasOne(f => f.Pessoa)
                 .WithMany(p => p.Filials)
                 .HasForeignKey(f => f.IDPessoa);

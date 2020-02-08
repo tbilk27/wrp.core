@@ -1,20 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
+﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using wrp.core.Entity;
 
 namespace wrp.core.Database.Configurations
 {
-    public class EtiquetaConfiguration : IEntityTypeConfiguration<Etiqueta>
+    public class EtiquetaConfiguration : BaseConfiguration<Etiqueta>
     {
         public void Configure(EntityTypeBuilder<Etiqueta> builder)
         {
-            builder.ToTable("Etiqueta");
-
-            builder.HasKey(o => o.ID);
-
             builder.Property(p => p.DadoImpresso)
                 .HasMaxLength(500);
 

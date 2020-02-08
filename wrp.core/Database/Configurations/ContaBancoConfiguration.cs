@@ -1,17 +1,12 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
+﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using wrp.core.Entity;
 
 namespace wrp.core.Database.Configurations
 {
-    public class ContaBancoConfiguration : IEntityTypeConfiguration<ContaBanco>
+    public class ContaBancoConfiguration : BaseConfiguration<ContaBanco>
     {
         public void Configure(EntityTypeBuilder<ContaBanco> builder)
         {
-            builder.ToTable("ContaBanco");
-
-            builder.HasKey(o => o.ID);
-
             builder.HasOne(b => b.Banco)
                 .WithMany(b => b.Contas)
                 .HasForeignKey(b => b.IDBanco)

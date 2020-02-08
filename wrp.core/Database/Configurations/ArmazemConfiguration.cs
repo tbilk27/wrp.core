@@ -4,13 +4,10 @@ using wrp.core.Entity;
 
 namespace wrp.core.Database.Configurations
 {
-    public class ArmazemConfiguration : IEntityTypeConfiguration<Armazem>
+    public class ArmazemConfiguration :BaseConfiguration<Armazem>
     {
         public void Configure(EntityTypeBuilder<Armazem> builder)
         {
-            builder.ToTable("Armazem");
-
-            builder.HasKey(o => o.ID);
             builder.Property(o => o.Descricao).HasMaxLength(200).IsRequired();
             builder.HasIndex(o => o.Descricao).IsUnique(true);
         }

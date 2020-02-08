@@ -1,17 +1,12 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
+﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using wrp.core.Entity;
 
 namespace wrp.core.Database.Configurations
 {
-    public class ComissaoFechamentoConfiguration : IEntityTypeConfiguration<ComissaoFechamento>
+    public class ComissaoFechamentoConfiguration : BaseConfiguration<ComissaoFechamento>
     {
         public void Configure(EntityTypeBuilder<ComissaoFechamento> builder)
         {
-            builder.ToTable("ComissaoFechamento");
-
-            builder.HasKey(o => o.ID);
-
             builder.HasOne(f => f.Favorecido)
                 .WithMany(f => f.ComissoesFechamentos)
                 .HasForeignKey(f => f.IDFavorecido)

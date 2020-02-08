@@ -9,6 +9,6 @@ namespace wrp.core.Entity
 
         public string CodigoArroba { get; set; }
 
-        public ICollection<Filial> Filials { get; set; }
+        public ICollection<Filial> Filiais { get; set; }
     }
 }

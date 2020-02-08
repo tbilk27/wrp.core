@@ -26,5 +26,6 @@ namespace wrp.core.Entity
 
         [ForeignKey("IDProdutoLote")]
         public virtual ICollection<ProdutoLoteItem> ProdutoLoteItens { get; set; }
+        public ICollection<Etiqueta> Etiquetas { get; set; }
     }
 }

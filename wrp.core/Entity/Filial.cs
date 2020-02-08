@@ -6,15 +6,11 @@ using wrp.core.Entity.Proform;
 
 namespace wrp.core.Entity
 {
-    [Table("FILIAL")]
     public class Filial : BaseEmpresa
     {
-        [ForeignKey("IDPessoa")]
         public Pessoa Pessoa { get; set; }
         public string IDPessoa { get; set; }
 
-        [Required]
-        [StringLength(200)]
         public string Nome { get; set; }
         public bool Matriz { get; set; }
         public bool IntegraMeusPedidos { get; set; }

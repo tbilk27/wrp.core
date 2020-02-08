@@ -53,5 +53,7 @@ namespace wrp.core.Entity
         public ItemListaServico ItemListaServico { get; set; }
         public string IDItemListaServico { get; set; }
 
+        public ICollection<Etiqueta> Etiquetas { get; set; }
+
     }
 }

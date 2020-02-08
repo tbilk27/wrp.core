@@ -78,5 +78,7 @@ namespace wrp.core.Entity
         public ICollection<ComissaoFechamento> ComissoesFechamentoTitulosImpostos { get; set; }
         public ICollection<ComissaoFechamento> ComissoesFechamentoTitulosPagamentos { get; set; }
 
+        public ICollection<FaturaTitulo> FaturasTitulos { get; set; }
+
     }
 }

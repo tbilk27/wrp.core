@@ -76,5 +76,7 @@ namespace wrp.core.Entity
 
         //[StringLength(36)]
         //public string CodigoReferencia { get; set; }
+
+        public ICollection<Filial> Filials { get; set; }
     }
 }

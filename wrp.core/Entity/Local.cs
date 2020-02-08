@@ -22,5 +22,7 @@ namespace wrp.core.Entity
         public bool PadraoEntradaNotaFiscal { get; set; }
 
         public int Sequencia { get; set; }
+
+        public ICollection<Etiqueta> Etiquetas { get; set; }
     }
 }
